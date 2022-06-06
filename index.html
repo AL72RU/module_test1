@@ -2,22 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Вебинар</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="block">Text Text Text</div>
-    <article class="theme"></article>
-    <img src="img/1.jpg" alt="">
-    <ul>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, laborum.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem, ipsum dolor.</li>
-        <li></li>
-        <li></li>
-    </ul>
+    <header class="header">
+        <div class="container">
+            <h1 class="Вебинар">Вебинар</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <H2 class="forms">Заявка на тех.осмотр</H2>
+            <form>
+                <fieldset>
+                    <legend>Опишите свой автомобиль</legend>
+                    Марка автомобиля <input type="text" name="trademark" placeholder="Введите марку авто.">
+                    <br>
+                    <br>
+                    Модель <input type="text" name="model" placeholder="Введите модель" required="required">
 
+                    <p>Коробка передач</p>
+                    АКПП <input type="radio" name="gear" value="auto" checked>
+                    МКПП <input type="radio" name="gear" value="hand">
+                    <br>
+                    <br>
+                    Необходимо проверить
+                    <br>
+                    <input type="checkbox" name="type1" value="brake">Тормозная жидкость<br>
+                    <input type="checkbox" name="type2" value="parall">Сход/Развал<br>
+                    <input type="checkbox" name="type3" value="coolant">Охлаждающая жидкость<br>
+                    <input type="checkbox" name="type4" value="suspencion">Подвеска<br>
+                    <input type="checkbox" name="type5" value="oil">Масло в двигателе<br>
+                    <br>
+                    Какое масло заливать?
+                    <br>
+                    <select name="oillist">
+                        <option label=""></option>
+                        <option label="Motul"></option>
+                        <option label="Shell">Shell</option>
+                        <option label="Castrol">Castrol</option>
+                        <option label="Oleina" disabled>Oleina</option>
+                    </select>
+                    <br>
+                    <br>
+                    Цвет охлаждающей жидкости
+                    <br>
+                    <input type="color" list="colorlist" value="#cc0000">
+                    <datalist id="colorlist">
+                        <option value="#ff0000" label="Красный"></option>
+                        <option value="#00ff00" label="Зелёный"></option>
+                    </datalist>
+                    <br>
+                    <br>
+                    Дата визита
+                    <br>
+                    <input type="date" name="visit" value="2022-06-07" min="2022-06-06" max="2022-06-10">
+                    <br>
+                    <br>
+                    Ваша почта
+                    <br>
+                    <input type="email" name="email">
+                    <br>
+                    <br>
+                    Ваш телефон
+                    <br>
+                    <input type="tel" name="phone">
+                    <br>
+                    <br>
+                    <input type="submit" name="submit" value="Ok">
+                    <input type="reset" name="reset" value="Cancel">
+                </fieldset>
+                <p>Прогресс тех.осмотра</p>
+                <progress value="25" max="100"></progress>
+                <br>
+                <br>
+                <fieldset>
+                    <legend>Обратная связь</legend>
+                    Оцените качество услуги
+                    <input type="range" min="0" max="10" step="1" value="7">
+                    <br>
+                    <br>
+                    Что бы хотелось улучшить?
+                    <br>
+                    <textarea name="comment" id="" cols="50" rows="7" placeholder="Ваши предложения"></textarea>
+                    <br>
+                    <br>
+                    Порекомендуете наш сервис?
+                    <label for="yes">Да</label>
+                    <input type="radio" name="choise" id="yes" value="yes" checked>
+                    <label for="no">Нет</label>
+                    <input type="radio" name="choise" id="no" value="yes">
+                    <br>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-blok">
+            <p class="footer-text">Skillfactory</p>
+        </div>
+    </footer>
 </body>
 </html>
