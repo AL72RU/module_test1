@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="open">Вход на сайт</button>
+    <dialog>
+        <form>
+            <p><input type="login" required placeholder="Логин"></p>
+            <p><input type="pass" required placeholder="Пароль"></p>
+            <p><button type="submit">Войти</button>
+            <button id="close">Закрыть окно</button></p>
+        </form>
+    </dialog>
+
     <header class="header">
         <div class="container">
             <h1 class="Вебинар">Вебинар</h1>
         </div>
     </header>
+
     <main>
         <div class="container">
             <H2 class="forms">Заявка на тех.осмотр</H2>
@@ -22,22 +33,24 @@
                     <br>
                     <br>
                     Модель <input type="text" name="model" placeholder="Введите модель" required="required">
-
-                    <p>Коробка передач</p>
-                    АКПП <input type="radio" name="gear" value="auto" checked>
-                    МКПП <input type="radio" name="gear" value="hand">
+                    <br>
+                    <br>
+                    Коробка передач:
+                    АКПП <input type="radio" name="gear" value="auto">
+                    МКПП <input type="radio" name="gear" value="hand" checked>
                     <br>
                     <br>
                     Необходимо проверить
                     <br>
-                    <input type="checkbox" name="type1" value="brake">Тормозная жидкость<br>
-                    <input type="checkbox" name="type2" value="parall">Сход/Развал<br>
-                    <input type="checkbox" name="type3" value="coolant">Охлаждающая жидкость<br>
-                    <input type="checkbox" name="type4" value="suspencion">Подвеска<br>
-                    <input type="checkbox" name="type5" value="oil">Масло в двигателе<br>
+                    <input type="checkbox" name="type3" value="coolant">Охлаждающая жидкость
+                    <input type="color" list="colorlist" value="#ffffff">
+                    <datalist id="colorlist">
+                        <option value="#ff0000" label="Красный"></option>
+                        <option value="#00ff00" label="Зелёный"></option>
+                        <option value="#0000ff" label="Синий"></option>
+                    </datalist>
                     <br>
-                    Какое масло заливать?
-                    <br>
+                    <input type="checkbox" name="type5" value="oil">Масло в двигателе
                     <select name="oillist">
                         <option label=""></option>
                         <option label="Motul"></option>
@@ -46,24 +59,13 @@
                         <option label="Oleina" disabled>Oleina</option>
                     </select>
                     <br>
-                    <br>
-                    Цвет охлаждающей жидкости
-                    <br>
-                    <input type="color" list="colorlist" value="#cc0000">
-                    <datalist id="colorlist">
-                        <option value="#ff0000" label="Красный"></option>
-                        <option value="#00ff00" label="Зелёный"></option>
-                    </datalist>
-                    <br>
+                    <input type="checkbox" name="type4" value="suspencion">Подвеска<br>
+                    <input type="checkbox" name="type1" value="brake">Тормозная жидкость<br>
+                    <input type="checkbox" name="type2" value="parall">Сход/Развал<br>
                     <br>
                     Дата визита
                     <br>
                     <input type="date" name="visit" value="2022-06-07" min="2022-06-06" max="2022-06-10">
-                    <br>
-                    <br>
-                    Ваша почта
-                    <br>
-                    <input type="email" name="email">
                     <br>
                     <br>
                     Ваш телефон
@@ -99,10 +101,13 @@
             </form>
         </div>
     </main>
+
     <footer class="footer">
         <div class="footer-blok">
             <p class="footer-text">Skillfactory</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
